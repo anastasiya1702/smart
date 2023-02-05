@@ -22,9 +22,13 @@ body {
 }
 
 a {
-  font-size: 16px;
-  line-height: 26px;
-  color: $default;
+  color: #7b7b7b;
+  @extend %rubik-400;
+  font-size: 14px;
+  transition: all .3s;
+  &:hover{
+    color: $accent;
+  }
 }
 
 .title {
@@ -34,7 +38,6 @@ a {
   @extend %dmsans-700;
   color: $title;
   margin-bottom: 25px;
-  text-transform: uppercase;
 }
 
 .text {
