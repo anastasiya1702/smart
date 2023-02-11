@@ -137,15 +137,15 @@
     margin-bottom: 35px;
   }
   &__form-input{
-    padding: 17px 15px;
+    padding: 10px 5px;
     background-color: #fef7f0;
     max-width: 170px;
     width: 100%;
     color: #234969;
     font-size: 16px;
     &::placeholder {
-      color: $title;
-      font-size: 16px;
+      color: #234969;
+      font-size: 12px;
     }
   }
   &__form-btn{
@@ -576,7 +576,7 @@
   // articles
 .articles{
   padding: 80px 0;
-  margin-bottom: -295px;
+  margin-bottom: -260px;
   &__top{
     display: flex;
     justify-content: space-between;
@@ -682,6 +682,200 @@
     align-items: center;
   }
 }
+  // top
+.top{
+  padding: 50px 100px;
+  background-color: #edf1f4;
+  text-align: center;
+  align-items: center;
+  &__title{
+    font-size: 36px;
+    @extend %rubik-300;
+    color: #222933;
+  }
+}
+  //  modal
+.modal{
+  padding-top: 110px;
+  &__form{
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto 115px;
+  }
+  &__label{
+    display: block;
+    margin-bottom: 30px;
+    color: #436372;
+  }
+  &__input{
+    width: 100%;
+    display: block;
+    background-color: #fff;
+    border: 2px solid #f6f6f6;
+    padding: 10px 15px;  
+  }
+  &__btn{
+    width: 100%;
+    display: block;
+    background-color: $accent;
+    color: #fff;
+    margin-bottom: 30px;
+    padding: 10px 14px;
+    @extend %rubik-500;
+    font-size: 18px;
+    border: 2px solid transparent;
+    transition: all .3s;
+    &:hover{
+      background-color: #fff;
+      border: 2px solid $accent;
+      color: #243f4d;
+    }
+  }
+  &__error{
+    display: inline-block;
+    color: #1f2044;
+    margin-bottom: 50px;
+    margin-left: 220px;
+  }
+  &__text{
+    margin-bottom: 20px;
+    text-align: center;
+    color: #436372;
+  }
+}
+
+.contacts{
+  padding: 110px 0 100px;
+  text-align: center;
+  &__subtitle{
+    font-size: 16px;
+    color: $accent;
+    @extend %dmsans-700;
+  }
+  &__title{
+    color: #436372;
+    @extend %dmsans-700;
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+}
+.contacts-items{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  &__item{
+    padding: 60px 45px;
+    text-align: center;
+    max-width: 365px;
+    width: 100%;
+    transition: all .3s;
+    border: 3px solid transparent;
+    &:hover{
+      border: 3px solid $accent;
+    }
+    svg{
+      margin: 0 auto 50px;
+      padding: 17px 21px;
+      box-shadow: 0 6px 57px 0 rgba(37, 37, 37, 0.05);
+      background-color: rgb(255, 255, 255);
+      width: 80px;
+      height: 80px;
+      transition: all .3s;
+      &:hover{
+        background-color: $accent;
+        border-radius: 20px;
+        path{
+          fill: #fff;
+        }
+      }
+    } 
+  }
+  &__link--address{
+    svg{
+      padding: 18px 24px;
+    }
+  }
+  &__title{
+    margin-bottom: 25px;
+    @extend %dmsans-700;
+    color: #222222;
+    font-size: 20px;
+  }
+  &__text{
+    color: #565872;
+    font-size: 16px;
+    @extend %rubik-400;
+    width: 170px;
+    margin: 0 auto;
+  }
+  &__link{
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+.contacts-inner{
+  display: flex;
+  justify-content: space-between;
+}
+.contacts-form{
+  display: block;
+  text-align: start;
+  max-width: 600px;
+  width: 100%;
+  padding: 5px;
+  &__box{
+    display: flex;
+    margin-bottom: 30px;
+  }
+  &__label{
+    width: 300px;
+    margin-right: 5px; 
+  }
+  &__input{
+    padding: 14px 10px;
+    width: 100%;
+    background-color: #fafafa;
+    font-size: 16px;
+    // position: relative;
+    // &::after{
+    //   content: '';
+    //   position: absolute;  
+    //   top: 5px;
+    //   right: 15px;
+    // }
+  }
+  // &__input--name{
+  //   background-image: url('../images/iconssvg/name.svg');
+  //   background-position: top center;
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   width: 15px;
+  //   height: 15px;
+  // }
+  // &__input--email {
+  //   background-image: url('../images/iconssvg/mail.svg');
+  // }
+  
+  &__textarea {
+    width: 100%;
+    display: block;
+    height: 225px;
+    resize: none;
+    margin-bottom: 25px;
+    padding: 10px;
+    background-color: #fafafa;
+  }
+  &__btn{
+    @extend %btn;
+    border-radius: 5px;
+    @extend %dmsans-500;
+  }
+}
+#map {
+  width: 600px;
+  height: 380px;
+} 
+
 
 
 
