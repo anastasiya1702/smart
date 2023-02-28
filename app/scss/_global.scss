@@ -51,27 +51,27 @@ a {
   display: inline-flex;
   justify-content: center;
   flex-wrap: wrap;
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 13px;
-    background-color: #727272;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: rotate(15deg);
-    top: 4px;
-    left: 49px;
-  }
   &__list {
     display: flex;
   }
   &__item:not(:last-child){
     padding-right: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 13px;
+      background-color: #727272;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: rotate(17deg);
+      top: 4px;
+      right: 11px;
+    }
   }
   &__item {
     color: #737980;
+    position: relative;
     &:last-child {
       color: $accent;
     }
@@ -80,51 +80,36 @@ a {
     color: inherit;
   }
 }
-
-// .header--404-page {
-//   background-color: $bg;
-// }
-
-// .pagination {
-//   display: flex;
-//   justify-content: center;
-//   padding: 30px 0;
-//   .pagination__list {
-//     display: flex;
-//     padding: 0 35px;
-//   }
-//   &__item {
-//     padding: 0 15px;
-//   }
-//   &__link--active {
-//     color: $accent;
-//   }
-//   &__arrows {
-//     text-transform: uppercase;
-//     position: relative;
-//     &::before {
-//       content: '';
-//       position: absolute;
-//       width: 5px;
-//       height: 10px;
-//       top: 8px;
-//     }
-//   }
-//   &__prev {
-//     padding-left: 15px;
-//     &::before {
-//       background-image: url('../images/iconssvg/angle_left.svg');
-//       left: 0;
-//     }
-//   }
-//   &__next {
-//     padding-right: 15px;
-//     &::before {
-//       background-image: url('../images/iconssvg/angle_right.svg');
-//       right: 0;
-//     }
-//   }
-// }
+.pagination{
+  padding: 100px 0 0 0;
+  display: flex;
+  justify-content: center;
+  &__list{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    border: 1px solid $accent;
+    padding: 15px 20px;
+  }
+  &__item--active{
+    background-color: $accent;
+  }
+  &__item:not(:last-child){
+    margin-right: 15px;
+  }
+  &__link{
+    color: #243f4d;
+    font-size: 16px;
+    @extend %rubik-400;
+  }
+  &__link--active{
+    color: #fff;
+    &:hover{
+      color: #fff;
+    }
+  }
+}
 
 
 // @media (max-width: 620px) {
