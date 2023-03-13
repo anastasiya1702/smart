@@ -27,9 +27,6 @@ a {
   @extend %rubik-400;
   font-size: 14px;
   transition: all .3s;
-  &:hover{
-    color: $accent;
-  }
 }
 
 .title {
@@ -91,6 +88,10 @@ a {
   &__item{
     border: 1px solid $accent;
     padding: 15px 20px;
+    transition: all .3s;
+    &:hover {
+      background-color: $accent;
+    }
   }
   &__item--active{
     background-color: $accent;
